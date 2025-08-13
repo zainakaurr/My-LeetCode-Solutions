@@ -1,0 +1,31 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+
+        newNums = set()
+        for num in nums:
+            if num in newNums:
+                return True
+            else:
+                newNums.add(num)
+
+        return False
+
+        
+        # newNums = []
+        # for num in nums:
+        #     if num in newNums:
+        #         return True
+        #     else:
+        #         newNums.append(num)
+
+        # return False
+        # the code above 
+
+
+        # nums.sort()
+
+        # for i  in range(len(nums)-1):
+        #     if nums[i] == nums[i+1]:
+        #         return True
+        # return False
+
