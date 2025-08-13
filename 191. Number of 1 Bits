@@ -1,0 +1,11 @@
+class Solution(object):
+    def hammingWeight(self, n):
+        """
+        :type n: int
+        :rtype: int
+        """
+        count = 0 #count of number of 1s
+        while n > 0:
+            n = n & (n - 1)  #Remove the rightmost bit and AND it with the original n
+            count += 1 # 1 added to count until n = 0000... 
+        return count
